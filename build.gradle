@@ -6,7 +6,7 @@ plugins {
 
 group = 'tech.dumpsterfire'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
@@ -20,9 +20,9 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-test {
-    useJUnitPlatform()
-}
+//test {
+//    useJUnitPlatform()
+//}
 //
 //task installFrontend(type: Exec) {
 //	inputs.file(file("frontend/yarn.lock"))
