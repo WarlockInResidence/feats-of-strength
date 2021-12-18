@@ -72,7 +72,7 @@ test {
 //clean {
 //	dependsOn(cleanFrontend)
 //}
-
-jar {
-    enabled = false
-}
+//
+//jar {
+//    enabled = false
+//}
