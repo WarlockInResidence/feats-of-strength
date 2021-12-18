@@ -36,18 +36,18 @@ public class TeamController {
     @GetMapping("/{id}")
     public ResponseEntity<Team> getById(@PathVariable Long id) {
         Optional<Team> optionalTeam = teamRepository.findById(id);
-        if (optionalTeam.isEmpty()) {
-            return ResponseEntity.unprocessableEntity().build();
+        if (!optionalTeam.isPresent()) {
+            return ResponseEntity.ok(optionalTeam.get());
         }
+        return ResponseEntity.unprocessableEntity().build();
 
-        return ResponseEntity.ok(optionalTeam.get());
     }
 
     // Update Team - Put
     @PutMapping("/{id}")
     public ResponseEntity<Team> update(@PathVariable Long id, Team team) {
         Optional<Team> optionalTeam = teamRepository.findById(id);
-        if (optionalTeam.isEmpty()) {
+        if (!optionalTeam.isPresent()) {
             return ResponseEntity.unprocessableEntity().build();
         }
 
@@ -61,7 +61,7 @@ public class TeamController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Team> delete(@PathVariable Long id) {
         Optional<Team> optionalTeam = teamRepository.findById(id);
-        if (optionalTeam.isEmpty()) {
+        if (!optionalTeam.isPresent()) {
             return ResponseEntity.unprocessableEntity().build();
         }
 
