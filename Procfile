@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar app.jar
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/feats-of-strength-1.0-SNAPSHOT.jar

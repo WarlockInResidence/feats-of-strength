@@ -20,11 +20,11 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-task stage(type: Copy, dependsOn: [clean, build]) {
-    from jar.archivePath
-    into project.rootDir
-    rename { 'app.jar' }
-}
+//task stage(type: Copy, dependsOn: [clean, build]) {
+//    from jar.archivePath
+//    into project.rootDir
+//    rename { 'app.jar' }
+//}
 
 //test {
 //    useJUnitPlatform()
